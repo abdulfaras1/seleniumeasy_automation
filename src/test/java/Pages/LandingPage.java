@@ -16,6 +16,11 @@ public class LandingPage {
 	}
 	
 	@FindBy(id = "btn_basic_example") WebElement startPracticeButton;
+	@FindBy(id= "at-cv-lightbox-close") WebElement bannerCloseButton;
 	
-	
+	public void clickStartPracticingButton()
+	{
+		bannerCloseButton.click();
+		startPracticeButton.click();
+	}
 }

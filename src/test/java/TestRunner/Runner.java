@@ -9,8 +9,8 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		monochrome=true,
-		tags="@FirstTest",
-		features = {"./src/test/resources/features/LandingPage.feature"},
+		//tags="@LandingPage", "@SimpleFormDemoPage",
+		features = {"./src/test/resources/features"},
 		glue = {"StepDefinitions"},
 				plugin = {"pretty"})
 public class Runner {
