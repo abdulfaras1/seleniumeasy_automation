@@ -12,15 +12,18 @@ public class SimpleFormDemo {
 		this.driver = ldriver;
 	}
 
-	@FindBy(css = "div.container-fluid.text-center:nth-child(3) div.row div.col-md-6.text-left:nth-child(2) div.row div.board div.tab-content div.tab-pane.fade.active.in:nth-child(2) div.list-group:nth-child(4) > a.list-group-item:nth-child(1)")
+	@FindBy (css = "div.container-fluid:nth-child(1) div.row:nth-child(2) nav.navbar.navbar-default div.container div.collapse.navbar-collapse ul.nav.navbar-nav:nth-child(1) li.dropdown.open:nth-child(1) > a.dropdown-toggle") 
+	WebElement inputFormsArrow;
+	@FindBy (css = "div.container-fluid:nth-child(1) div.row:nth-child(2) nav.navbar.navbar-default div.container div.collapse.navbar-collapse ul.nav.navbar-nav:nth-child(1) li.dropdown.open:nth-child(1) ul.dropdown-menu li:nth-child(1) > a:nth-child(1)")
 	WebElement simpleFormDemoLink;
-	@FindBy(xpath = "//body/div[@id='easycont']/div[1]/div[2]")
+	@FindBy (xpath = "//body/div[@id='easycont']/div[1]/div[2]")
 	WebElement enterMessageTextBox;
-	@FindBy(xpath = "//button[contains(text(),'Show Message')]")
+	@FindBy (xpath = "//button[contains(text(),'Show Message')]")
 	WebElement enterMessageButton;
 
 	public void clickOnSimpleFormLink() {
-		simpleFormDemoLink.submit();
+		inputFormsArrow.click();
+		simpleFormDemoLink.click();
 	}
 
 	public void updateSingleInputFieldClickButton() {

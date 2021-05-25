@@ -2,6 +2,8 @@ package StepDefinitions;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.concurrent.TimeUnit;
+
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -45,6 +47,7 @@ public class StepDefinitions {
 	@Given("User clicks on Simple Form Demo link")
 	public void user_clicks_on_simple_form_demo_link() throws Throwable {
 		SimpleFormDemo simpleFormDemo = PageFactory.initElements(driver, SimpleFormDemo.class);
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		simpleFormDemo.clickOnSimpleFormLink();
 	}
 	
